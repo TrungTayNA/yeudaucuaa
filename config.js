@@ -8,7 +8,7 @@ const CONFIG = {
     title: 'Có phải anh đã cứu thế giới ở một cuộc đời trước đây',
     desc: 'Và giờ thì cả thế giới của anh đang ở đây ',
     btnYes: 'em la yeu dau cua anhhhh <33',
-    btnNo: 'Không, vx giann anhh :3',
+    btnNo: 'Không, vx giann anhh:3',
     question:'Trên thế giới hơn 7 tỉ người mà sao em lại nho anh <3',
     btnReply: 'Gửi cho chang ngốc',
     reply: 'Giận thì gian mà thương thì thương <33333333',

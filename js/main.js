@@ -10,6 +10,25 @@ $(document).ready(function() {
     }, 600);
 })
 
+function initBackgroundAudio() {
+    var bgAudio = document.getElementById('bgAudio');
+    if (!bgAudio) return;
+
+    bgAudio.volume = 0.5;
+    bgAudio.muted = false;
+
+    var playAudio = function() {
+        bgAudio.play().catch(function() {});
+        document.removeEventListener('pointerdown', playAudio);
+        document.removeEventListener('touchstart', playAudio);
+        document.removeEventListener('click', playAudio);
+    };
+
+    document.addEventListener('pointerdown', playAudio, { passive: true });
+    document.addEventListener('touchstart', playAudio, { passive: true });
+    document.addEventListener('click', playAudio);
+}
+
 function init(){
     $('#title').text(CONFIG.title)
     $('#desc').text(CONFIG.desc)
@@ -59,6 +78,7 @@ function moveButton() {
 }
 
 init()
+initBackgroundAudio()
 
 var n = 0;
 $('#no').mousemove(function() {
